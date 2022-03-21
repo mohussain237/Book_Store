@@ -119,7 +119,7 @@ const BookDetail = () => {
               label="Available"
             />
 
-            <Button variant="contained" type="submit">
+            <Button variant="contained" type="submit" to='/books'>
               Update Book
             </Button>
           </Box>
