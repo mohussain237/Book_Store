@@ -6,7 +6,7 @@ import Carousal from "../Carousal";
 
 
 
-const URL = "http://localhost:5000/books";
+const URL = "https://book-server-01.herokuapp.com/books";
 const fetchHandler = async () => {
   return await axios.get(URL).then((res) => res.data);
 };

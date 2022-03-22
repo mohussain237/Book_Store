@@ -18,7 +18,7 @@ const BookDetail = () => {
   useEffect(() => {
     const fetchHandler = async () => {
       await axios
-        .get(`http://localhost:5000/books/${id}`)
+        .get(`https://book-server-01.herokuapp.com/books/${id}`)
         .then((res) => res.data)
         .then((data) => setInputs(data.book));
     };
@@ -27,7 +27,7 @@ const BookDetail = () => {
 
   const sendRequest = async () => {
     await axios
-      .put(`http://localhost:5000/books/${id}`, {
+      .put(`https://book-server-01.herokuapp.com/books/${id}`, {
         name: String(inputs.name),
         author: String(inputs.author),
         description: String(inputs.description),

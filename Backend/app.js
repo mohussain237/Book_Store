@@ -11,13 +11,15 @@ app.use("/books", router);
 
 
 // connection to DB
+
+const PORT = process.env.PORT || '5000'
 mongoose
   .connect(
     'mongodb+srv://user01:MjmxfCplpsHI6zrZ@mydatabase.lojjr.mongodb.net/MACHINE_TEST?retryWrites=true&w=majority'
   )
   .then(() => console.log("Connected To Database"))
   .then(() => {
-    app.listen(5000);
+    app.listen(PORT);
   })
   .catch((err) => console.log(err));
 
